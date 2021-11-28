@@ -12,7 +12,6 @@ contract("Crypto Boys", async (accounts) => {
   before(async () => {
     cryptoBoys = await CryptoBoys.deployed();
   });
-
   describe("Deployment", async () => {
     it("contract has an address", async () => {
       const address = await cryptoBoys.address;
@@ -21,12 +20,10 @@ contract("Crypto Boys", async (accounts) => {
       assert.notEqual(address, null);
       assert.notEqual(address, undefined);
     });
-
     it("has a name", async () => {
       const name = await cryptoBoys.collectionName();
       assert.equal(name, "Crypto Boys Collection");
     });
-
     it("has a symbol", async () => {
       const symbol = await cryptoBoys.collectionNameSymbol();
       assert.equal(symbol, "CB");
