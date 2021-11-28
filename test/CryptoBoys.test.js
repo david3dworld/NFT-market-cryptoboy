@@ -29,29 +29,24 @@ contract("Crypto Boys", async (accounts) => {
       assert.equal(symbol, "CB");
     });
   });
-
   describe("application features", async () => {
     it("allows users to mint ERC721 token", async () => {
       cryptoBoyCount = await cryptoBoys.cryptoBoyCounter();
       assert.equal(cryptoBoyCount.toNumber(), 0);
-
       let tokenExists;
       tokenExists = await cryptoBoys.getTokenExists(1, { from: accounts[0] });
       assert.equal(tokenExists, false);
-
       let tokenURIExists;
       tokenURIExists = await cryptoBoys.tokenURIExists(
         "https://gateway.pinata.cloud/ipfs/QmYFmJgQGH4uPHRYN15Xdv4aLd9o4Aq63y1e4GgN6kj5aK/2",
         { from: accounts[0] }
       );
       assert.equal(tokenURIExists, false);
-
       let tokenNameExists;
       tokenNameExists = await cryptoBoys.tokenNameExists("myCBNFT", {
         from: accounts[0],
       });
       assert.equal(tokenNameExists, false);
-
       let colorExists;
       const colorsArray1 = [
         "#2a2b2e",
@@ -76,7 +71,6 @@ contract("Crypto Boys", async (accounts) => {
         });
         assert.equal(colorExists, false);
       }
-
       result = await cryptoBoys.mintCryptoBoy(
         "myCBNFT",
         "https://gateway.pinata.cloud/ipfs/QmYFmJgQGH4uPHRYN15Xdv4aLd9o4Aq63y1e4GgN6kj5aK/2",
