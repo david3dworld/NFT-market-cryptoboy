@@ -1,14 +1,10 @@
 const { assert } = require("chai");
-
 const CryptoBoys = artifacts.require("./CryptoBoys.sol");
-
 require("chai")
   .use(require("chai-as-promised"))
   .should();
-
 contract("Crypto Boys", async (accounts) => {
   let cryptoBoys, result, cryptoBoyCount;
-
   before(async () => {
     cryptoBoys = await CryptoBoys.deployed();
   });
@@ -90,19 +86,16 @@ contract("Crypto Boys", async (accounts) => {
         { from: accounts[0] }
       );
       assert.equal(tokenURIExists, true);
-
       tokenNameExists = await cryptoBoys.tokenNameExists("myCBNFT", {
         from: accounts[0],
       });
       assert.equal(tokenNameExists, true);
-
       for (let i = 0; i < colorsArray1.length; i++) {
         colorExists = await cryptoBoys.colorExists(colorsArray1[i], {
           from: accounts[0],
         });
         assert.equal(colorExists, true);
       }
-
       let cryptoboy;
       cryptoboy = await cryptoBoys.allCryptoBoys(1, {
         from: accounts[0],
@@ -122,7 +115,6 @@ contract("Crypto Boys", async (accounts) => {
       assert.equal(web3.utils.fromWei(cryptoboy.price, "ether"), 1);
       assert.equal(cryptoboy.numberOfTransfers.toNumber(), 0);
       assert.equal(cryptoboy.forSale, true);
-
       const colorsArray2 = [
         "#212b2e",
         "#515a66",
