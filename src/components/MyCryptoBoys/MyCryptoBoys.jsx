@@ -24,7 +24,6 @@ const MyCryptoBoys = ({
     );
     setMyCryptoBoys(my_crypto_boys);
   }, [cryptoBoys]);
-
   return (
     <div>
       <div className="card mt-1">
