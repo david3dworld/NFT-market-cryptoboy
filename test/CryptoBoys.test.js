@@ -158,7 +158,6 @@ contract("Crypto Boys", async (accounts) => {
         "#93afb7",
         "#4381a4",
       ];
-
       // same token uri -reject
       await cryptoBoys.mintCryptoBoy(
         "myCBNFT3",
@@ -167,7 +166,6 @@ contract("Crypto Boys", async (accounts) => {
         colorsArray3,
         { from: accounts[3] }
       ).should.be.rejected;
-
       const colorsArray4 = [
         "#252b2e",
         "#555a66",
@@ -185,7 +183,6 @@ contract("Crypto Boys", async (accounts) => {
         "#95afb7",
         "#4581a4",
       ];
-
       // 0x0 adress sending txn - reject
       await cryptoBoys.mintCryptoBoy(
         "myCBNFT4",
