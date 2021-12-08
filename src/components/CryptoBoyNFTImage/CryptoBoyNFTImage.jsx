@@ -18,7 +18,6 @@ const CryptoBoyNFTImage = ({ colors }) => {
     bodyBackgroundColor,
     bodyBorderColor,
   } = colors;
-
   const cryptoboy_card = {
     width: "280px",
     height: "260px",
@@ -26,7 +25,6 @@ const CryptoBoyNFTImage = ({ colors }) => {
     backgroundColor: `${cardBackgroundColor}`,
     border: `10px solid ${cardBorderColor}`,
   };
-
   const head = {
     zIndex: "1",
     width: "100px",
@@ -37,7 +35,6 @@ const CryptoBoyNFTImage = ({ colors }) => {
     backgroundColor: `${headBackgroundColor}`,
     position: "relative",
   };
-
   const eyeLeft = {
     zIndex: "1",
     width: "60px",
@@ -49,7 +46,6 @@ const CryptoBoyNFTImage = ({ colors }) => {
     left: "-1.5rem",
     border: `6px solid ${leftEyeBorderColor}`,
   };
-
   const eyeRight = {
     zIndex: "1",
     width: "70px",
@@ -61,7 +57,6 @@ const CryptoBoyNFTImage = ({ colors }) => {
     left: "2.8rem",
     border: `6px solid ${rightEyeBorderColor}`,
   };
-
   const pupilLeft = {
     width: "20px",
     height: "20px",
@@ -71,7 +66,6 @@ const CryptoBoyNFTImage = ({ colors }) => {
     left: "1rem",
     top: "1rem",
   };
-
   const pupilRight = {
     width: "30px",
     height: "30px",
@@ -81,7 +75,6 @@ const CryptoBoyNFTImage = ({ colors }) => {
     left: "1rem",
     top: "1rem",
   };
-
   const mouth = {
     position: "absolute",
     top: "12px",
@@ -93,7 +86,6 @@ const CryptoBoyNFTImage = ({ colors }) => {
     borderRadius: "100%",
     borderBottom: `8px solid ${mouthColor}`,
   };
-
   const neck = {
     position: "relative",
     left: "7.7rem",
