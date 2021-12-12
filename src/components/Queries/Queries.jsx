@@ -4,14 +4,12 @@ const Queries = (props) => {
   const [tokenIdForOwner, setTokenIdForOwner] = useState("");
   const [tokenOwner, setTokenOwner] = useState("");
   const [tokenIdForOwnerNotFound, setTokenIdForOwnerNotFound] = useState(false);
-
   const [tokenIdForMetadata, setTokenIdForMetadata] = useState("");
   const [tokenMetadata, setTokenMetadata] = useState("");
   const [tokenMetadataLink, setTokenMetadataLink] = useState("");
   const [tokenIdForMetadataNotFound, setTokenIdForMetadataNotFound] = useState(
     false
   );
-
   const getTokenOwner = async (e) => {
     e.preventDefault();
     try {
@@ -28,7 +26,6 @@ const Queries = (props) => {
       setTokenIdForOwner("");
     }
   };
-
   const getTokenMetadata = async (e) => {
     e.preventDefault();
     try {
@@ -48,7 +45,6 @@ const Queries = (props) => {
       setTokenIdForMetadata("");
     }
   };
-
   return (
     <div>
       <div className="card mt-1">

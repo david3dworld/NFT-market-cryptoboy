@@ -95,7 +95,6 @@ const CryptoBoyNFTImage = ({ colors }) => {
     backgroundColor: `${neckBackgroundColor}`,
     border: `4px solid ${neckBorderColor}`,
   };
-
   const body = {
     height: "50px",
     width: "90px",
@@ -106,7 +105,6 @@ const CryptoBoyNFTImage = ({ colors }) => {
     position: "relative",
     left: "0.1rem",
   };
-
   const leftHand = {
     position: "absolute",
     top: "20px",
