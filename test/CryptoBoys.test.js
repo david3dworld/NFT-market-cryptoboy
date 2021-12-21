@@ -209,7 +209,6 @@ contract("Crypto Boys", async (accounts) => {
         "#9dafb7",
         "#4d81a4",
       ];
-
       await cryptoBoys.mintCryptoBoy(
         "myCBNFT5",
         "https://gateway.pinata.cloud/ipfs/QmYFmJgQGH4uPRRYN15Xdv4aLd9o4Aq63y1e4GgN6kj5aK/2",
