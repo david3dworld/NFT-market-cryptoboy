@@ -13,7 +13,6 @@ import Loading from "./Loading/Loading";
 import Navbar from "./Navbar/Navbar";
 import MyCryptoBoys from "./MyCryptoBoys/MyCryptoBoys";
 import Queries from "./Queries/Queries";
-
 const ipfsClient = require("ipfs-http-client");
 const ipfs = ipfsClient({
   host: "ipfs.infura.io",
@@ -41,7 +40,6 @@ class App extends Component {
       lastMintTime: null,
     };
   }
-
   componentWillMount = async () => {
     await this.loadWeb3();
     await this.loadBlockchainData();
@@ -60,7 +58,6 @@ class App extends Component {
         : this.checkIfCanMint(parseInt(this.state.lastMintTime));
     }
   };
-
   checkIfCanMint = (lastMintTime) => {
     const mintBtn = document.getElementById("mintBtn");
     const timeGap = 300000; //5min in milliseconds
