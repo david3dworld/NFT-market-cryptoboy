@@ -19,7 +19,6 @@ const ipfs = ipfsClient({
   port: 5001,
   protocol: "https",
 });
-
 class App extends Component {
   constructor(props) {
     super(props);
@@ -90,7 +89,6 @@ class App extends Component {
       );
     }
   };
-
   loadBlockchainData = async () => {
     const web3 = window.web3;
     const accounts = await web3.eth.getAccounts();
@@ -142,7 +140,6 @@ class App extends Component {
       }
     }
   };
-
   connectToMetamask = async () => {
     await window.ethereum.enable();
     this.setState({ metamaskConnected: true });
